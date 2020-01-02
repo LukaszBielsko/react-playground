@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
-
+const mongoose = require('mongoose')
 
 app.use(express.json())
 
@@ -13,10 +13,22 @@ app.get('/bcrypt', (req, res) => {
     bcrypt.hash(myPlaintextPassword, salt, function (err, hash) {
       // Store hash in your password DB.
       console.log('bcrypt hash:', hash)
-      res.send('you have been bcrypted, mate')
+      res.send('<div><h1>you have been bcrypted, mate</h1><p>pls check your terminal</p></div>')
     });
   });
 })
+
+/* 
+  connect node backend with react
+  create register page
+  send username and password to backend
+  hash password, store it
+
+  create login page
+  send username and password to backend
+  use bcrypt compare function to check for match
+  display message that depends on isMatch
+*/
 
 
 
