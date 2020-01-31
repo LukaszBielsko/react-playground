@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-// RENDER PROPS PATTERN 
+// RENDER PROPS PATTERN
 class Amount extends Component {
   constructor(props) {
     super(props);
     this.state = {
       amount: 0,
-      sth: 'AHA'
+      sth: "AHA"
     };
   }
   onIncrement = () => {
@@ -30,8 +30,8 @@ class Amount extends Component {
   }
 }
 
-const Pound = ({amount}) => <p>Pound:{amount * 5}</p>
-const Euro = ({amount}) => <p>Euro: {amount * (3) }</p>
+const Pound = ({ amount }) => <p>Pound:{amount * 5}</p>;
+const Euro = ({ amount }) => <p>Euro: {amount * 3}</p>;
 
 const App = () => (
   // <Amount>
@@ -44,9 +44,11 @@ const App = () => (
   //     </div>
   //   )}
   // </Amount>
-  <Amount>{ ({amount, sth}) => {
-    return <div></div>
-  }} </Amount>
-)
+  <Amount>
+    {({ amount, sth }) => {
+      return <div></div>;
+    }}
+  </Amount>
+);
 
 export default App;
