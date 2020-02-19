@@ -9,6 +9,8 @@ import FatArrow from "./components/FatArrow";
 import RenderProp2 from "./components/RenderProps2";
 import RenderProp3 from "./components/RenderProps3";
 import LifeCycle from "./components/LifeCycle";
+import Test from "./components/Test";
+import RecurentDiv from "./components/RecurentDiv";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Link to="/render-prop">RenderProps</Link>
         <Link to="/render-prop3">RenderProps3</Link>
         <Link to="/life-cycle">LifeCycle</Link>
+        <Link to="/test"> Test </Link>
+        <Link to="/recurent"> Recurent Div </Link>
       </div>
 
       <Switch>
@@ -41,6 +45,12 @@ function App() {
           </Route>
           <Route exact path="/life-cycle">
             <LifeCycle />
+          </Route>
+          <Route exact path="/test">
+            <Test />
+          </Route>
+          <Route exact path="/recurent">
+            <RecurentDiv width={600} height={600} />
           </Route>
         </div>
       </Switch>
